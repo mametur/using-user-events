@@ -1,18 +1,18 @@
 function showResult() {
   // read user input
-  const firstNumberValue = document.getElementById('first-number').value;
+  const firstNumberValue = document.getElementById('first').value;
   const firstNumber = Number(firstNumberValue);
 
   const operation = document.getElementById('operation').value;
 
-  const secondNumberValue = document.getElementById('second-number').value;
+  const secondNumberValue = document.getElementById('second').value;
   const secondNumber = Number(secondNumberValue);
 
   // execute core logic
-  const result = doMath(operation, secondNumber, firstNumber);
+  const result = doMath(operation, firstNumber, secondNumber);
 
   // communicate result to user
-  document.getElementById('program-output').innerHTML = reslut;
+  document.getElementById('program-output').innerHTML = result;
 
   // log action for developers
   console.log('\n-- user action --');
