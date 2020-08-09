@@ -2,13 +2,13 @@ function typeCastHandler(event) {
   // read & process user input
   const form = event.target.form;
   const intendedType = form.type.value;
-  const newValue = form.value.value;
+  const stringToCast = form.value.value;
 
   // execute core logic
-  const newValue = typeCasting(stringToCast, intendedType);
+  const newValue = typeCaster(stringToCast, intendedType);
 
   // communicate result to user
-  document.GetElementById('casted-value').InnerHTML = typeof newValue + ': ' + newValue;
+  document.getElementById('casted-value').innerHTML = typeof newValue + ': ' + newValue;
 
   // log action for developers
   console.log('\n-- user action --');
