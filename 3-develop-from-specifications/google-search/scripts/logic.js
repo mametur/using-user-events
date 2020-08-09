@@ -1,16 +1,14 @@
-const _Tests = [
-  { name: 'Test 1', args: [], expected: null },
-  { name: 'Test 2', args: [], expected: null },
-  { name: 'Test 3', args: [], expected: null },
-  { name: 'Test 4', args: [], expected: null },
-  { name: 'Test 5', args: [], expected: null },
-  { name: 'Test 6', args: [], expected: null },
-  { name: 'Test 7', args: [], expected: null },
-  { name: 'eighth', args: [], expected: null },
-  { name: 'ninth', args: [], expected: null },
-  { name: 'tenth', args: [], expected: null },
+const searchQuery = [
+  { name: 'Test 1', args: ['book',], expected: 'https://www.google.com/?query=book' },
+  { name: 'Test 2', args: ['mame'], expected: 'https://www.google.com/?query=mame' },
+  { name: 'Test 3', args: ['mame hello'], expected: 'https://www.google.com/?query=mame%20hello' },
+  { name: 'Test 4', args: [''], expected: 'https://www.google.com/?query=' },
 ];
 
-function _() { }
+function googleURL(args) {
+  args = encodeURIComponent(args)
+  return `https://www.google.com/?query=${args}`;
 
-testing(_, _Tests);
+}
+
+testing(googleURL, searchQuery);

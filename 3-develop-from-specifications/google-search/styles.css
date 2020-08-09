@@ -1,0 +1,22 @@
+body{
+    height: 100vh;
+    
+}
+section {
+    height: 100vh;
+
+}
+
+
+form {
+    width: 50vw;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.user-input{
+    width: 100%;
+    border : 2px solid rgb(250, 61, 3);
+}
