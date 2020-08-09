@@ -1,2 +1,26 @@
-<script src='../../testing.js'></script>
-<script src='./scripts/logic.js'></script>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src='../../testing.js'></script>
+    <script src='./scripts/logic.js'></script>
+    <script src="./scripts/handlers.js"></script>
+    <link rel="stylesheet" href="./styles.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <section id='user-interface'>
+        <form class='inputs'>
+            <label for="visible">Challenge String</label>
+            <input id='visible' type='text' name='target'>
+            <label for="obscured">Replicate</label>
+            <input id='obscured' type='password' name='guess' autocomplete="on">
+        </form>
+    </section>
+    <script src="./scripts/listeners.js"></script>
+</body>
+
+</html>

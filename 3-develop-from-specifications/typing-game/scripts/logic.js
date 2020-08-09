@@ -1,4 +1,4 @@
-const _Tests = [
+const tests = [
   { name: 'Test 1', args: [1, 1], expected: 'passing' },
   { name: 'Test 2', args: ['1', 1], expected: 'failing' },
   { name: 'Test 3', args: [1e2, 100], expected: 'passing' },
@@ -10,8 +10,10 @@ const _Tests = [
   { name: 'ninth', args: [false, false], expected: 'passing' },
 ];
 
-function _() {
+function compareThem(first, second) {
+
+  return first === second ? 'passing' : 'failing';
 
 }
 
-testing(_, _Tests);
+testing(compareThem, tests);
