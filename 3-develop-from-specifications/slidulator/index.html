@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--CSS link-->
+    <link rel="stylesheet" href="./styles.css">
+    <!--Testing-->
+    <script src="../../testing.js"></script>
+    <!--JS-->
+    <script src="./scripts/logic.js"></script>
+    <script src="./scripts/handlers.js"></script>
+    <title>calculator</title>
+</head>
+
+<body>
+    <section id='user-input'>
+        <code id="program-output" class="output-field">Result:</code>
+        <form id="inputs">
+            <input type="range" name="left" class="input-slider">
+            <select name="operation">
+                <option value="add">+</option>
+                <option value="subtract">-</option>
+                <option value="multiply">*</option>
+                <option value="divide">/</option>
+            </select>
+            <input type="range" name="right" class="input-slider">
+        </form>
+
+    </section>
+    <script src="./scripts/event-listeners.js"></script>
+</body>
+
+</html>

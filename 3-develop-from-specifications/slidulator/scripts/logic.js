@@ -1,4 +1,4 @@
-const _Tests = [
+const testMe = [
   { name: 'Test 1', args: ['add', 4, 5], expected: 9 },
   { name: 'Test 2', args: ['subtract', 4, 5], expected: -1 },
   { name: 'Test 3', args: ['multiply', 4, 5], expected: 20 },
@@ -7,8 +7,29 @@ const _Tests = [
   { name: 'Test 6', args: ['', 4, 5], expected: 'invalid operation' },
 ];
 
-function _() {
+function doMath(op, a, b) {
 
+  const firstOperand = Number(a);
+  const secondOperand = Number(b);
+  let output = 0;
+  switch (op) {
+    case 'add':
+      output = firstOperand + secondOperand;
+      break;
+    case 'subtract':
+      output = firstOperand - secondOperand;
+      break;
+    case 'multiply':
+      output = firstOperand * secondOperand;
+      break;
+    case 'divide':
+      output = firstOperand / secondOperand;
+      break;
+    default:
+      output = 'invalid operation';
+      break;
+  }
+  return output;
 }
 
-testing(_, _Tests);
+testing(doMath, testMe);
